@@ -1,0 +1,1135 @@
+<% if(stId != null) {
+
+    var stClass = stId.classB;
+%>
+
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Responsive Bootstrap4 Dashboard Template">
+		<meta name="author" content="ParkerThemes">
+		<link rel="shortcut icon" href="img/fav.png">
+		<title><%= stClass %> - Dashboard</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/fonts/style.css">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/vendor/megamenu/css/megamenu.css">
+		<link rel="stylesheet" href="/vendor/search-filter/search-filter.css">
+		<link rel="stylesheet" href="/vendor/search-filter/custom-search-filter.css">
+	</head>
+	<body>
+<%- include('header.ejs'); %>
+
+<form action="/markupdate" method="POST">
+				<!-- Content wrapper scroll start -->
+				<div class="content-wrapper-scroll">
+
+					<!-- Content wrapper start -->
+					<div class="content-wrapper">
+                        <input type="hidden" name="id" id="id" value="<%= stId._id %>">
+
+<!-- Row start -->
+<div class="row gutters">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+<!-- Card start -->
+<div class="card">
+<div class="card-header">
+    <div class="card-title">Student Information</div>
+</div>
+<div class="card-body">
+    
+    <!-- Row start -->
+    <div class="row gutters">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            
+            <!-- Field wrapper start -->
+            <div class="field-wrapper">
+                <input class="form-control" type="text" name="name" style="border-color:#99d98c;" value="<%= stId.name %>">
+                <div class="field-placeholder">Name <span class="text-danger">*</span></div>
+                <div class="form-text">
+                    Please enter your full name.
+                </div>
+            </div>
+            <!-- Field wrapper end -->
+
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            
+            <!-- Field wrapper start -->
+            <div class="field-wrapper">
+                <input class="form-control" type="text" name="fname" style="border-color:#99d98c;" value="<%= stId.fname %>">
+                <div class="field-placeholder">Father/Mother Name <span class="text-danger">*</span></div>
+                <div class="form-text">
+                Please enter your full name.
+                </div>
+            </div>
+            <!-- Field wrapper end -->
+
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            
+            <!-- Field wrapper start -->
+            <div class="field-wrapper">
+                <input class="form-control" type="text" name="rollnumber" style="border-color:#99d98c;" value="<%= stId.rollnumber %>">
+                <div class="field-placeholder">Roll Number</div>
+                <div class="form-text">
+                    Please enter your roll number.
+                </div>
+            </div>
+            <!-- Field wrapper end -->
+
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+            
+            <!-- Field wrapper start -->
+            <div class="field-wrapper">
+                <input class="form-control" type="text" name="address" style="border-color:#99d98c;" value="<%= stId.address %>">
+                <div class="field-placeholder">Permanent/Present Address</div>
+            </div>
+            <!-- Field wrapper end -->
+
+
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">	
+            <!-- Field wrapper start -->
+            <div class="field-wrapper">
+            <input type="text" value="<%= stClass %>" class="select-multiple js-states" style="background:#f8f8fb;" name="class" readonly>
+                    
+                <div class="field-placeholder">Class</div>
+            </div>
+            <!-- Field wrapper end -->
+        </div>
+    </div>
+    <!-- Row end -->
+
+</div>
+</div>
+<!-- Card end -->
+
+</div>
+</div>
+<!-- Row end -->
+<!-- Row start -->
+<div class="row gutters">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+<!-- Card start -->
+<div class="card">
+<div class="card-body">
+    
+    <!-- Row start -->
+    <div class="row gutters">
+        
+
+
+
+
+
+
+
+        
+
+
+        <% 
+        if(stClass == "IX-A" || stClass == "X-A" || stClass == "IX-B" || stClass == "X-B"){
+        }else{
+        %>
+    <!-- English Subject -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#1e6091;">English</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="english[pt1]" value="<%= stId.english.pt1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="english[nb1]" value="<%= stId.english.nb1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="english[se1]" value="<%= stId.english.se1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="english[theory]" value="<%= stId.english.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <!-- End of English Subject -->
+
+
+
+
+        <!-- Math Subject -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#52b69a;">Mathematics</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="math[pt1]" value="<%= stId.math.pt1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="math[nb1]" value="<%= stId.math.nb1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="math[se1]" value="<%= stId.math.se1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="math[theory]" value="<%= stId.math.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <!-- End of Math Subject  -->
+
+
+
+            
+        <!-- Hindi Subject -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#d4d700;">Hindi</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="hindi[pt1]" value="<%= stId.hindi.pt1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="hindi[nb1]" value="<%= stId.hindi.nb1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="hindi[se1]" value="<%= stId.hindi.se1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="hindi[theory]" value="<%= stId.hindi.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <!-- End of Hindi Subject -->
+
+
+        <!-- Bengali Subject -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#ff7b00">Bengali</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="bengali[pt1]" value="<%= stId.bengali.pt1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="bengali[nb1]" value="<%= stId.bengali.nb1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="bengali[se1]" value="<%= stId.bengali.se1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="bengali[theory]" value="<%= stId.bengali.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <!-- End of Bengali -->
+        <% } %>
+
+
+        
+
+        <!-- Science Subject -->
+        <% if(stClass == "Nursery" || stClass == "KG-I" || stClass == "IX-A" || stClass == "IX-B" || stClass == "X-A" || stClass == "X-B"){
+        }else{
+        %>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#ffb703;">Science</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="science[pt1]" value="<%= stId.science.pt1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="science[nb1]" value="<%= stId.science.nb1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="science[se1]" value="<%= stId.science.se1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="science[theory]" value="<%= stId.science.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <%
+        }
+        %>
+        <!-- End of Science Subject -->
+
+
+
+        <!-- Social Studies Subject -->
+        <%
+            if(stClass == "VI" || stClass == "VII" || stClass == "VIII-A" || stClass == "VIII-B"){
+        %>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#ffb703;">Social Studies</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="socialStudy[pt1]" value="<%= stId.socialStudy.pt1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="socialStudy[nb1]" value="<%= stId.socialStudy.nb1 %>" >
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="socialStudy[se1]" value="<%= stId.socialStudy.se1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="socialStudy[theory]" value="<%= stId.socialStudy.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <%
+            }
+        %>
+        <!-- End of Social Studies -->
+
+        
+
+        <!-- Social Science -->
+        <% 
+        if(stClass == "IV" || stClass == "V"){
+        %>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#1565c0;">Social Science</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="socialScience[pt1]" value="<%= stId.socialScience.pt1 %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="socialScience[nb1]" value="<%= stId.socialScience.nb1 %>" >
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="socialScience[se1]" value="<%= stId.socialScience.se1 %>" >
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="socialScience[theory]" value="<%= stId.socialScience.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <% } %>
+        <!-- End of Social Science -->
+
+
+
+        <!-- Computer -->
+        <% 
+        if(stClass == "KG-I" || stClass == "KG-II" || stClass == "Nursery" || stClass == "IX-A" || stClass == "X-A" || stClass == "X-B" || stClass == "IX-B"){
+        }else{
+        %>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#1565c0;">Computer</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" id="disabledInput" type="text" disabled>
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" id="disabledInput" type="text" disabled>
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" id="disabledInput" type="text" disabled>
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="computer[theory]" value="<%= stId.computer.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <% } %>
+        <!-- Computer -->
+
+                <!-- Moral Science -->
+                <% 
+        if(stClass == "KG-I" || stClass == "KG-II" || stClass == "Nursery" || stClass == "IX-A" || stClass == "X-A" || stClass == "X-B" || stClass == "IX-B"){
+        }else{
+        %>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+                    <div class="form-section-header" style="background:#1565c0;">Moral Science</div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div class="field-wrapper">
+                        <div class="input-group">
+                            <input class="form-control" id="disabledInput" type="text" disabled>
+                            <span class="input-group-text">
+                                <i class="icon-edit-2"></i>
+                            </span>
+                        </div>
+                        <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+                    </div>
+        
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div class="field-wrapper">
+                        <div class="input-group">
+                            <input class="form-control" id="disabledInput" type="text" disabled>
+                            <span class="input-group-text">
+                                <i class="icon-edit-2"></i>
+                            </span>
+                        </div>
+                        <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div class="field-wrapper">
+                        <div class="input-group">
+                            <input class="form-control" id="disabledInput" type="text" disabled>
+                            <span class="input-group-text">
+                                <i class="icon-edit-2"></i>
+                            </span>
+                        </div>
+                        <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div class="field-wrapper">
+                        <div class="input-group">
+                            <input class="form-control" type="text" name="moralScience[theory]" value="<%= stId.moralScience.theory %>">
+                            <span class="input-group-text">
+                                <i class="icon-edit-2"></i>
+                            </span>
+                        </div>
+                        <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+                    </div>
+                </div>
+                <% } %>
+                <!-- Moral Science -->
+
+        
+        <!-- General Knowledge -->
+        <% 
+        if(stClass == "KG-I" || stClass == "KG-II" || stClass == "Nursery" || stClass == "IX-A" || stClass == "X-A" || stClass == "X-B" || stClass == "IX-B"){
+        }else{
+        %>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#1565c0;">General Knowledge</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" id="disabledInput" type="text" disabled>
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">PT 1<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" id="disabledInput" type="text" disabled>
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Note Book 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" id="disabledInput" type="text" disabled>
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">S.Erichment 1<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="generalKnowledge[theory]" value="<%= stId.generalKnowledge.theory %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <% } %>
+        <!-- End of General Knowledge -->
+
+
+
+
+
+
+<!------------------------------------------- Nursery, KG-I, KG-II Sections -----------------------------------> 
+        <% 
+        if(stClass == "KG-I" || stClass == "KG-II" || stClass == "Nursery"){
+        %>
+        <!-- Rhymes -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#1565c0;">Rhymes</div>
+        </div>
+        <div class="col-xl-12 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="rhymes" value="<%= stId.rhymes %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <!-- End of Rhymes -->
+
+
+
+        <!-- Dictation -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#1565c0;">Dictation</div>
+        </div>
+
+        <div class="col-xl-12 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="dictation" value="<%= stId.dictation %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <!-- End of Dictation -->
+
+
+
+        <!-- Conversation -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#1565c0;">Conversation</div>
+        </div>
+        <div class="col-xl-12 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="conversation" value="<%= stId.conversation %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <!-- End of Conversation -->
+
+
+        <!-- Cursive -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#1565c0;">Cursive</div>
+        </div>
+        <div class="col-xl-12 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="cursive" value="<%= stId.cursive %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <!-- End of Cursive -->
+        
+        <% } %>
+
+<!------------------------------------------- End of Nursery, KG-I, KG-II Sections ----------------------------> 
+
+
+
+
+<!------------------------------------------- CLASS IX-A, IX-B, X-A, X-B -------------------------------------> 
+
+    <% 
+    if(stClass == "IX-A" || stClass == "X-A" || stClass == "IX-B" || stClass == "X-B"){
+    %>
+
+    <!-- English -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+        <div class="form-section-header" style="background:#d4d700;">English</div>
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="english[pt1]" value="<%= stId.english.pt1 %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Internal Assessment 1<span class="text-danger">*</span></div>
+        </div>
+
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="english[theory]" value="<%= stId.english.theory %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+        </div>
+    </div>
+    <!-- Class IX-X End of English Subject -->
+
+    <!-- Math -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+        <div class="form-section-header" style="background:#d4d700;">Math</div>
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="math[pt1]" value="<%= stId.math.pt1 %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Internal Assessment 1<span class="text-danger">*</span></div>
+        </div>
+
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="math[theory]" value="<%= stId.math.theory %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+        </div>
+    </div>
+    <!-- Class IX-X End of Math Subject -->
+
+    <!-- Hindi -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+        <div class="form-section-header" style="background:#d4d700;">Hindi/Bengali</div>
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="hindi[pt1]" value="<%= stId.hindi.pt1 %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Internal Assessment 1<span class="text-danger">*</span></div>
+        </div>
+
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="hindi[theory]" value="<%= stId.hindi.theory %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+        </div>
+    </div>
+    <!-- Class IX-X End of Hindi Subject -->
+
+    <!-- Science -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+        <div class="form-section-header" style="background:#d4d700;">Science</div>
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="science[pt1]" value="<%= stId.science.pt1 %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Internal Assessment 1<span class="text-danger">*</span></div>
+        </div>
+
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="science[theory]" value="<%= stId.science.theory %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+        </div>
+    </div>
+    <!-- Class IX-X End of Science Subject -->
+
+    <!-- Social Studies -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+        <div class="form-section-header" style="background:#d4d700;">Social Studies</div>
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="socialStudy[pt1]" value="<%= stId.socialStudy.pt1 %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Internal Assessment 1<span class="text-danger">*</span></div>
+        </div>
+
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="socialStudy[theory]" value="<%= stId.socialStudy.theory %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+        </div>
+    </div>
+    <!-- Class IX-X End of Social Studies Subject -->
+
+
+    <!-- Information Technology -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+        <div class="form-section-header" style="background:#d4d700;">Information Technology</div>
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="informationTechnology[pt1]" value="<%= stId.informationTechnology.pt1 %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Internal Assessment 1<span class="text-danger">*</span></div>
+        </div>
+
+    </div>
+    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4 col-12">
+        <div class="field-wrapper">
+            <div class="input-group">
+                <input class="form-control" type="text" name="informationTechnology[theory]" value="<%= stId.informationTechnology.theory %>">
+                <span class="input-group-text">
+                    <i class="icon-edit-2"></i>
+                </span>
+            </div>
+            <div class="field-placeholder">Theory<span class="text-danger">*</span></div>
+        </div>
+    </div>
+    <!-- Class IX-X End of Information Technology Subject -->
+
+    <% } %>
+
+
+
+<!------------------------------------------- END OF CLASS IX-A, IX-B, X-A, X-B ------------------------------> 
+
+
+
+
+
+
+
+
+
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12">
+            <div class="form-section-header" style="background:#386641;">Co-Scholastic Areas</div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="workEducation" value="<%= stId.workEducation %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Work Education<span class="text-danger">*</span></div>
+            </div>
+
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="artEducation" value="<%= stId.artEducation %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Art Education<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="physicalEducation" value="<%= stId.physicalEducation %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Health & Physical Education<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="discipline" value="<%= stId.discipline %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Discipline<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="sports" value="<%= stId.sports %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">Sports<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="workingDays" value="<%= stId.workingDays %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">No. of Working Days<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="presentDays" value="<%= stId.presentDays %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">No. of Present<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="inClass" value="<%= stId.inClass %>">
+                    <span class="input-group-text">
+                        <i class="icon-edit-2"></i>
+                    </span>
+                </div>
+                <div class="field-placeholder">No. of Student in Class<span class="text-danger">*</span></div>
+            </div>
+        </div>
+        
+
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            
+            <div class="field-wrapper">
+                <textarea class="form-control" rows="2" style="border-color:red;" name="remarks" id="remarks"><%= stId.remarks %></textarea>
+                <div class="field-placeholder">Remark <span class="text-danger">*</span></div>
+            </div>
+
+        </div> 
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <button class="btn btn-primary" style="background:#f94144;width:100%;" name="submit">Submit</button>
+        </div>
+    </div>
+    <!-- Row end -->
+
+</div>
+</div>
+<!-- Card end -->
+
+</div>
+</div>
+<!-- Row end -->
+
+</div>
+<!-- Content wrapper end -->
+</form>
+					<!-- App Footer start -->
+					<div class="app-footer" style="color:orange;">© Berean English Medium School</div>
+					<!-- App footer end -->
+
+				</div>
+				<!-- Content wrapper scroll end -->
+
+			</div>
+			<!-- *************
+				************ Main container end *************
+			************* -->
+
+		</div>
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.bundle.min.js"></script>
+		<script src="/js/modernizr.js"></script>
+		<script src="/js/moment.js"></script>
+		<script src="/vendor/megamenu/js/megamenu.js"></script>
+		<script src="/vendor/megamenu/js/custom.js"></script>
+		<script src="/vendor/slimscroll/slimscroll.min.js"></script>
+		<script src="/vendor/slimscroll/custom-scrollbar.js"></script>
+		<script src="/vendor/search-filter/search-filter.js"></script>
+		<script src="/vendor/search-filter/custom-search-filter.js"></script>
+		<script src="/js/main.js"></script>
+
+	</body>
+</html>
+
+<% } %>

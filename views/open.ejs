@@ -1,0 +1,24 @@
+<% if(newsUrl != null) {
+     nb1 = parseInt(newsUrl.english.pt1);
+     nb2 = parseInt(newsUrl.english.nb1);
+     nb3 = parseInt(newsUrl.english.se1);
+    
+     tt = nb1 + nb2 + nb3;
+
+     var avarage = tt/3;
+    
+    %>
+
+
+<p>Username: <%= newsUrl.name %></p>
+<p>English PT1 <%= newsUrl.english.pt1 %></p>
+<p>English NB1 <%= newsUrl.english.nb1 %></p>
+<p>English SE1 <%= newsUrl.english.se1 %></p>
+<p>English THEORY <%= newsUrl.english.theory %></p>
+
+<h1><%= tt %></h1>
+<h2><%= avarage %></h2>
+
+
+
+<% } %>

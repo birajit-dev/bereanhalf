@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Meta -->
+		<meta name="description" content="Responsive Bootstrap4 Dashboard Template">
+		<meta name="author" content="ParkerThemes">
+		<link rel="shortcut icon" href="img/fav.png">
+
+		<!-- Title -->
+		<title><%- sexData %> - Dashboard</title>
+
+
+		<!-- *************
+			************ Common Css Files *************
+		************ -->
+		<!-- Bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		
+		<!-- Icomoon Font Icons css -->
+		<link rel="stylesheet" href="fonts/style.css">
+
+		<!-- Main css -->
+		<link rel="stylesheet" href="css/main.css">
+
+
+		<!-- *************
+			************ Vendor Css Files *************
+		************ -->
+
+		<!-- Mega Menu -->
+		<link rel="stylesheet" href="vendor/megamenu/css/megamenu.css">
+
+		<!-- Search Filter JS -->
+		<link rel="stylesheet" href="vendor/search-filter/search-filter.css">
+		<link rel="stylesheet" href="vendor/search-filter/custom-search-filter.css">
+		
+		<!-- Data Tables -->
+		<link rel="stylesheet" href="vendor/datatables/dataTables.bs4.css" />
+		<link rel="stylesheet" href="vendor/datatables/dataTables.bs4-custom.css" />
+		<link href="vendor/datatables/buttons.bs.css" rel="stylesheet" />
+		
+	</head>
+	<body>
+
+
+    <%- include('header.ejs'); %>
+
+				<!-- Content wrapper scroll start -->
+				<div class="content-wrapper-scroll">
+
+					<!-- Content wrapper start -->
+					<div class="content-wrapper">
+
+						<!-- Row start -->
+						<div class="row gutters">
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<button type="button" class="btn btn-danger" style="margin-left:45%;font-family: 'Times New Roman', Times, serif;">Class - <%= sexData %></button>
+								<div class="card">
+									<div class="card-body">
+										<div class="table-responsive">
+                                        <a href="/student" class="btn btn-success" style="margin-left:44%; font-family: 'Times New Roman', Times, serif;">Add Student</a>
+											<table id="copy-print-csv" class="table v-middle">
+												<thead>
+													<tr>
+													  <th>Student Name:</th>
+													  <th>Total Mark</th>
+													  <th>Remark</th>
+													  <th>Term I</th>
+													  <!-- <th>Term II</th> -->
+				 									  <th>Action</th>
+													</tr>
+												</thead>
+												<tbody>
+
+
+                        <% if(studentList != ''){
+                            studentList.forEach(function(dataS, index){ %>
+
+                        <tr>
+                            <td>
+                            <div class="media-box">
+                                <img src="img/user5.png" class="media-avatar" alt="Customer">
+                                <div class="media-box-body">
+                                    <a href="#"><%- dataS.name %></a>
+                                    <p>Roll No:<%- dataS.rollnumber %> </p>
+                                </div>
+                            </div>
+                            </td>
+                            <td></td>
+                            <td><%- dataS.remarks %></td>
+                            
+                            <td><a href="/updatemark/<%- dataS.news_id %>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                    <i class="icon-edit1 text-info"></i>
+                                </a></td>
+
+
+                                    <!-- <td><a href="t_123.php?url=<?php echo $r['id'];?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                    <i class="icon-edit1 text-info"></i>
+                                </a></td> -->
+
+                            <td>
+
+
+                            <div class="actions">
+
+                        
+
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Block">
+                                    <i class="icon-file-plus"></i>
+                                </a>
+                                <a href="/dstudent/<%- dataS._id %>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                                    <i class="icon-x-circle text-danger"></i>
+                                </a>
+                            </div>
+                            </td>
+                        </tr>
+                        <%
+                        })
+                    } %>
+
+
+
+
+
+												</tbody>
+								    	</table>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- Row end -->
+
+					</div>
+					<!-- Content wrapper end -->
+
+					<!-- App Footer start -->
+					<div class="app-footer">© Berean English Medium School</div>
+					<!-- App footer end -->
+
+				</div>
+				<!-- Content wrapper scroll end -->
+
+			</div>
+			<!-- *************
+				************ Main container end *************
+			************* -->
+
+		</div>
+		<!-- Page wrapper end -->
+
+		<!-- *************
+			************ Required JavaScript Files *************
+		************* -->
+		<!-- Required jQuery first, then Bootstrap Bundle JS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/modernizr.js"></script>
+		<script src="js/moment.js"></script>
+
+		<!-- *************
+			************ Vendor Js Files *************
+		************* -->
+
+		<!-- Megamenu JS -->
+		<script src="vendor/megamenu/js/megamenu.js"></script>
+		<script src="vendor/megamenu/js/custom.js"></script>
+				
+		<!-- Slimscroll JS -->
+		<script src="vendor/slimscroll/slimscroll.min.js"></script>
+		<script src="vendor/slimscroll/custom-scrollbar.js"></script>
+
+		<!-- Search Filter JS -->
+		<script src="vendor/search-filter/search-filter.js"></script>
+		<script src="vendor/search-filter/custom-search-filter.js"></script>
+
+		<!-- Data Tables -->
+		<script src="vendor/datatables/dataTables.min.js"></script>
+		<script src="vendor/datatables/dataTables.bootstrap.min.js"></script>
+		
+		<!-- Custom Data tables -->
+		<script src="vendor/datatables/custom/custom-datatables.js"></script>
+
+		<!-- Download / CSV / Copy / Print -->
+		<script src="vendor/datatables/buttons.min.js"></script>
+		<script src="vendor/datatables/jszip.min.js"></script>
+		<script src="vendor/datatables/pdfmake.min.js"></script>
+		<script src="vendor/datatables/vfs_fonts.js"></script>
+		<script src="vendor/datatables/html5.min.js"></script>
+		<script src="vendor/datatables/buttons.print.min.js"></script>		
+
+		<!-- Main Js Required -->
+		<script src="js/main.js"></script>
+
+	</body>
+
+</html>
