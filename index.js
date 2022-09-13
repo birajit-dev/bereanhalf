@@ -50,12 +50,12 @@ app.use('*', (req, res) => {
 
 
 
-  module.exports = app;
-  module.exports.handler = serverless(app);
+  // module.exports = app;
+  // module.exports.handler = serverless(app);
 
 
 
-// const port  = 8080
-// app.listen(port, () => {
-//     console.log(`Example app listening on port http://localhost:${port}`)
-//   })
+const port  = 8080
+app.listen(port, () => {
+    console.log(`Example app listening on port http://localhost:${port}`)
+  })
