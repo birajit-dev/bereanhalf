@@ -144,11 +144,10 @@ exports.authAdmin = async(req, res) => {
     var p4 = "admin@4"
     var p5 = "admin@5"
     var p6 = "admin@6"
-    var p7 = "admin@7"
-    var p8a = "admin@8a"
-    var p8b = "admin@8b"
-    var p9a = "admin@9a"
-    var p9b = "admin@9b"
+    var p7a = "admin@7a"
+    var p7b = "admin@7b"
+    var p8 = "admin@8"
+    var p9 = "admin@9"
     var p10a = "admin@10a"
     var p10b = "admin@10b"
     if(password == pNursery){
@@ -187,25 +186,22 @@ exports.authAdmin = async(req, res) => {
         var sex = req.session;
         sex.userid = "VI";
         res.redirect('/dashboard')
-    }else if(password == p7){
+    }else if(password == p7a){
         var sex = req.session;
-        sex.userid = "VII";
+        sex.userid = "VII-A";
         res.redirect('/dashboard')
-    }else if(password == p8a){
+    }else if(password == p7b){
         var sex = req.session;
-        sex.userid = "VIII-A";
+        sex.userid = "VII-B";
         res.redirect('/dashboard')
-    }else if(password == p8b){
+    }
+    else if(password == p8){
         var sex = req.session;
-        sex.userid = "VIII-B";
+        sex.userid = "VIII";
         res.redirect('/dashboard')
-    }else if(password == p9a){
+    }else if(password == p9){
         var sex = req.session;
-        sex.userid = "IX-A";
-        res.redirect('/dashboard')
-    }else if(password == p9b){
-        var sex = req.session;
-        sex.userid = "IX-B";
+        sex.userid = "IX";
         res.redirect('/dashboard')
     }else if(password == p10a){
         var sex = req.session;
