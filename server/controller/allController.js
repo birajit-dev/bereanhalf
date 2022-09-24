@@ -307,3 +307,14 @@ exports.pnurse = async(req, res) =>{
         res.status(500).send({message: error.message || "Error in Homepage"});
     }  
 }
+
+exports.printX = async(req, res) =>{
+    try{
+        let xId = req.params.id;
+        const data = await addStudent.findOne({news_id:xId});
+        res.render('print/x',{data});
+    }
+    catch{
+        res.status(500).send({message: error.message || "Error in Homepage"});
+    }  
+}

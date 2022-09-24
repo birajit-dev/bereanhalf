@@ -23,10 +23,12 @@ router.get('/login', allController.login);
 router.post('/users', allController.authAdmin);
 
 router.get('/pdf/iv/:id', allController.print4);
+
 router.get('/pdf/kgii/:id', allController.printKg2);
 
 router.get('/pdf/nursery/:id', allController.pnurse);
 
+router.get('/pdf/x/:id', allController.printX);
 
 
 module.exports = router;
