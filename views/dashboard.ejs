@@ -13,6 +13,10 @@
 		<!-- Title -->
 		<title><%- sexData %> - Dashboard</title>
 
+		<%
+		const classData = sexData;
+		%> 
+
 
 		<!-- *************
 			************ Common Css Files *************
@@ -70,8 +74,9 @@
 													  <th>Total Mark</th>
 													  <th>Remark</th>
 													  <th>Term I</th>
+													  <th>Print</th>
 													  <!-- <th>Term II</th> -->
-				 									  <th>Action</th>
+				 									  <th>Delete</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -98,20 +103,48 @@
                                 </a></td>
 
 
-                                    <!-- <td><a href="t_123.php?url=<?php echo $r['id'];?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                                    <i class="icon-edit1 text-info"></i>
-                                </a></td> -->
+
+
+
+								<%
+								if(classData == 'IV' || classData == 'V' || classData == 'I' || classData == 'II' || classData == 'III' || classData == 'VI' || classData == 'VII-A' || classData == 'VII-B' || classData == 'VIII')
+								{
+								%>
+								<td><a href="/pdf/iv/<%= dataS.news_id %>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                    <i class="icon-file-plus"></i>
+                                </a></td>
+								<%
+								}
+								else if(classData == 'KG-II'){
+								%>
+								<td><a href="/pdf/kgii/<%= dataS.news_id %>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                    <i class="icon-file-plus"></i>
+                                </a></td>
+								<%
+								}
+								else if(classData == 'Nursery' || classData == 'KG-I'){
+								%>
+								<td><a href="/pdf/nursery/<%= dataS.news_id %>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                    <i class="icon-file-plus"></i>
+                                </a></td>
+								<%
+								}
+								else if(classData == "IX" || classData == "X-A" || classData == "X-B")
+								%>
+                                
+
+
+
+
+
+
 
                             <td>
 
 
                             <div class="actions">
 
-                        
 
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Block">
-                                    <i class="icon-file-plus"></i>
-                                </a>
                                 <a href="/dstudent/<%- dataS._id %>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
                                     <i class="icon-x-circle text-danger"></i>
                                 </a>

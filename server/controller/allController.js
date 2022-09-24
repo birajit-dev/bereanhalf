@@ -273,3 +273,37 @@ exports.logOut = async(req, res) =>{
         res.end()
     }
 }
+
+exports.print4 = async(req, res) =>{
+    try{
+        let nUrl = req.params.id;
+        const data = await addStudent.findOne({news_id:nUrl});
+        res.render('print/IV-V',{data});
+    }
+    catch{
+        res.status(500).send({message: error.message || "Error in Homepage"});
+    }   
+}
+
+
+exports.printKg2 = async(req, res) =>{
+    try{
+        let nUrl = req.params.id;
+        const data = await addStudent.findOne({news_id:nUrl});
+        res.render('print/kgii',{data});
+    }
+    catch{
+        res.status(500).send({message: error.message || "Error in Homepage"});
+    }   
+}
+
+exports.pnurse = async(req, res) =>{
+    try{
+        let ix = req.params.id;
+        const data = await addStudent.findOne({news_id:ix});
+        res.render('print/kgi',{data});
+    }
+    catch{
+        res.status(500).send({message: error.message || "Error in Homepage"});
+    }  
+}
