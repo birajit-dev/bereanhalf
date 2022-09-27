@@ -20,8 +20,8 @@ const session = require('express-session');
 
 
 exports.homepages = async(req, res) =>{
-    res.render('index');
-    //res.redirect('/dashboard');
+    //res.render('index');
+    res.redirect('/dashboard');
 }
 
 exports.addingData = async(req, res) =>{
