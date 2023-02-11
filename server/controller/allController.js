@@ -78,8 +78,64 @@ exports.checkData = async(req, res) =>{
         console.log('Somthing went wrong on Update Marks.')
     }
  }
+
+ exports.termiiPage = async(req, res) =>{
+    try{
+        let id =req.params.id;
+        const stId = await addStudent.findOne({news_id:id})
+        res.render('termii',{stId})
+    }
+    catch{
+        console.log('Somthing went wrong on Update Marks.')
+    }
+ }
  
  exports.editMarks = async(req, res) =>{
+    const mData = req.body;
+    const {id} = req.body;
+
+    addStudent.findByIdAndUpdate(id, 
+                {
+                    name: mData.name,
+                    fname: mData.fname,
+                    rollnumber: mData.rollnumber,
+                    classB: mData.classB,
+                    address: mData.address,
+                    english:mData.english,
+                    math:mData.math,
+                    hindi:mData.hindi,
+                    bengali:mData.bengali,
+                    computer:mData.computer,
+                    moralScience:mData.moralScience,
+                    generalKnowledge:mData.generalKnowledge,
+                    science:mData.science,
+                    socialScience:mData.socialScience,
+                    socialStudy:mData.socialStudy,
+                    informationTechnology:mData.informationTechnology,
+                    rhymes:mData.rhymes,
+                    dictation:mData.dictation,
+                    conversation:mData.conversation,
+                    cursive:mData.cursive,
+                    workEducation:mData.workEducation,
+                    artEducation:mData.artEducation,
+                    physicalEducation:mData.physicalEducation,
+                    discipline:mData.discipline,
+                    sports:mData.sports,
+                    workingDays:mData.workingDays,
+                    presentDays:mData.presentDays,
+                    inClass:mData.inClass,
+                    remarks:mData.remarks,
+                }, function(err, data) {
+        if(err){
+            res.send('Something Went Wrong');
+        }
+        else{
+            res.redirect('/dashboard');
+        }
+        });
+}
+
+exports.editMarks2 = async(req, res) =>{
     const mData = req.body;
     const {id} = req.body;
 

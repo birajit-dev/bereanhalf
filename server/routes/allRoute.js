@@ -9,12 +9,18 @@ router.get('/student', allController.addClass1);
 router.post('/ad1', allController.addingData);
 router.get('/mark/:id', allController.checkData);
 router.get('/updatemark/:id', allController.updateMark);
+router.get('/updatemarkii/:id', allController.termiiPage);
 
 router.get('/logout', allController.logOut);
 
 router.get('/dstudent/:id', allController.deleteData);
 
+
+
+
 router.post('/markupdate', allController.editMarks);
+router.post('/markupdate2', allController.editMarks2);
+
 
 router.get('/dashboard', allController.dashBoard);
 
