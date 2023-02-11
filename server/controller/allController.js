@@ -15,10 +15,6 @@ const session = require('express-session');
 // const aws = require('aws-sdk');
 // var rss = require('rss');
 
-
-
-
-
 exports.homepages = async(req, res) =>{
     //res.render('index');
     res.redirect('/dashboard');
