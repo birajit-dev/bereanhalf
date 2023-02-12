@@ -19,7 +19,7 @@ router.get('/dstudent/:id', allController.deleteData);
 
 
 router.post('/markupdate', allController.editMarks);
-router.post('/markupdate2', allController.editMarks2);
+router.post('/markupdate_ii', allController.editMarks2);
 
 
 router.get('/dashboard', allController.dashBoard);
