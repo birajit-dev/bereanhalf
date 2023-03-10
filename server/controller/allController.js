@@ -38,18 +38,43 @@ exports.addingData = async(req, res) =>{
         socialScience:mData.socialScience,
         socialStudy:mData.socialStudy,
         informationTechnology:mData.informationTechnology,
+        
         rhymes:mData.rhymes,
+        rhymes2:mData.rhymes2,
+
         dictation:mData.dictation,
+        dictation2:mData.dictation2,
+
         conversation:mData.conversation,
+        conversation2:mData.conversation2,
+
         cursive:mData.cursive,
+        cursive2:mData.cursive2,
+
         workEducation:mData.workEducation,
+        workEducation2:mData.workEducation2,
+
         artEducation:mData.artEducation,
+        artEducation2:mData.artEducation2,
+
         physicalEducation:mData.physicalEducation,
+        physicalEducation2:mData.physicalEducation2,
+
         discipline:mData.discipline,
+        discipline2:mData.discipline2,
+
         sports:mData.sports,
+        sports2:mData.sports2,
+
         workingDays:mData.workingDays,
+        workingDays2:mData.workingDays2,
+
         presentDays:mData.presentDays,
+        presentDays2:mData.presentDays2,
+
         inClass:mData.inClass,
+        inClass2:mData.inClass2,
+
         remarks:mData.remarks,
 
     });
