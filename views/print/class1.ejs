@@ -129,7 +129,7 @@ if(data != null) {
         var sTse2 = removeAb(data.socialStudy.se2);
         var sTtheory2 = removeAb(data.socialStudy.theory2);
         var sTTotal2 = (sTpt2+sTnb2+sTse2+sTtheory2).toFixed();
-        var sTFinal = (sTTotal + sTTotal2)/2;
+        var sTFinal = (parseInt(sTTotal) + parseInt(sTTotal2))/2;
         var sTGrade = gradeFun(sTTotal);
     }else{
         var sTpt1 = removeAb(data.socialScience.pt1)
@@ -207,7 +207,7 @@ if(data != null) {
     //Overall Mark
     //var overAll = parseInt(etotal)+parseInt(mTotal)+parseInt(bTotal)+parseInt(hTotal)+parseInt(sTotal)+parseInt(sTTotal)+parseInt(moralScience)+parseInt(generalKnowledge)+parseInt(computer);
 
-    var overAll = parseInt(efinal)+parseInt(mfinal)+parseInt(bfinal)+parseInt(hfinal)+parseInt(sfinal)+parseInt(sTFinal)+parseInt(moralFinal)+parseInt(gkFinal)+parseInt(csFinal);
+    var overAll = (efinal)+(mfinal)+(bfinal)+(hfinal)+(sfinal)+(sTFinal)+(moralFinal)+(gkFinal)+(csFinal);
     
     //Percentage Function
 
