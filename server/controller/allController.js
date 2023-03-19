@@ -380,7 +380,9 @@ exports.print4 = async(req, res) =>{
     try{
         let nUrl = req.params.id;
         const data = await addStudent.findOne({news_id:nUrl});
-        res.render('print/IV-V',{data});
+        //res.render('print/IV-V',{data});
+        res.render('print/class1',{data});
+
     }
     catch{
         res.status(500).send({message: error.message || "Error in Homepage"});
@@ -403,7 +405,8 @@ exports.pnurse = async(req, res) =>{
     try{
         let ix = req.params.id;
         const data = await addStudent.findOne({news_id:ix});
-        res.render('print/kgi',{data});
+        //res.render('print/kgi',{data});
+        res.render('print/newkg1',{data});
     }
     catch{
         res.status(500).send({message: error.message || "Error in Homepage"});
