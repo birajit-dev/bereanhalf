@@ -427,3 +427,15 @@ exports.printX = async(req, res) =>{
         res.status(500).send({message: error.message || "Error in Homepage"});
     }  
 }
+
+exports.printsix = async(req, res) =>{
+    try{
+        let xId = req.params.id;
+        const data = await addStudent.findOne({news_id:xId});
+        //res.render('print/x',{data});
+        res.render('print/class68',{data});
+    }
+    catch{
+        res.status(500).send({message: error.message || "Error in Homepage"});
+    }  
+}

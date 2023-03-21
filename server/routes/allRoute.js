@@ -36,5 +36,7 @@ router.get('/pdf/nursery/:id', allController.pnurse);
 
 router.get('/pdf/x/:id', allController.printX);
 
+router.get('/pdf/vi/:id', allController.printsix);
+
 
 module.exports = router;

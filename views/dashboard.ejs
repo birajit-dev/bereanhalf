@@ -110,10 +110,19 @@
 
 
 								<%
-								if(classData == 'IV' || classData == 'V' || classData == 'I' || classData == 'II' || classData == 'III' || classData == 'VI' || classData == 'VII-A' || classData == 'VII-B' || classData == 'VIII')
+								if(classData == 'IV' || classData == 'V' || classData == 'I' || classData == 'II' || classData == 'III')
 								{
 								%>
 								<td><a href="/pdf/iv/<%= dataS.news_id %>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                    <i class="icon-file-plus"></i>
+                                </a></td>
+
+								<%
+							}
+								else if(classData == 'VI' || classData == 'VII-A' || classData == 'VII-B' || classData == 'VIII')
+								{
+								%>
+								<td><a href="/pdf/vi/<%= dataS.news_id %>" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                     <i class="icon-file-plus"></i>
                                 </a></td>
 								<%
