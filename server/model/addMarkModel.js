@@ -16,6 +16,8 @@ const markData = new mongoose.Schema({
     rollnumber: Number,
     address: String,
     classB: String,
+    mname: String,
+    adno: String,
     english:{
         pt1: {
             type:String,

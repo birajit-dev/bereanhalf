@@ -46,12 +46,22 @@
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
             <div class="field-wrapper">
                 <input class="form-control" type="text" name="fname" style="border-color:#99d98c;" value="<%= stId.fname %>">
-                <div class="field-placeholder">Father/Mother Name <span class="text-danger">*</span></div>
+                <div class="field-placeholder">Father's Name <span class="text-danger">*</span></div>
                 <div class="form-text">
-                Please enter your full name.
+                Please enter your father's name.
                 </div>
             </div>
         </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <input class="form-control" type="text" name="mname" style="border-color:#99d98c;" value="<%= stId.mname %>">
+                <div class="field-placeholder">Mother's Name <span class="text-danger">*</span></div>
+                <div class="form-text">
+                Please enter your motther's name.
+                </div>
+            </div>
+        </div>
+
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
             <div class="field-wrapper">
                 <input class="form-control" type="text" name="rollnumber" style="border-color:#99d98c;" value="<%= stId.rollnumber %>">
@@ -61,7 +71,19 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="field-wrapper">
+                <input class="form-control" type="text" name="adno" style="border-color:#99d98c;" value="<%= stId.rollnumber %>">
+                <div class="field-placeholder">Admission No</div>
+                <div class="form-text">
+                    Please enter your admission number.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xl-8 col-lg- col-md-8 col-sm-8 col-12">
             <div class="field-wrapper">
                 <input class="form-control" type="text" name="address" style="border-color:#99d98c;" value="<%= stId.address %>">
                 <div class="field-placeholder">Permanent/Present Address</div>
